@@ -63,4 +63,4 @@ laptop_finder_muhammad_ahmad/
 - `node_modules/` is not part of the submission, `package.json` is enough to reinstall.
 - Favorites and the chosen theme (Performance Mode / Battery Saver Mode) are stored in
   `localStorage`, so they survive a page reload.
-- GitHub repo: add your repository link here before submitting.
+- GitHub repo: https://github.com/Muhammad-A-Foad/Laptop-Comparisons
