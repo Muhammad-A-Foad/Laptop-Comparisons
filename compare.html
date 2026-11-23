@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="performance">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compare — Student Laptop Finder</title>
+  <link rel="stylesheet" href="dist/output.css">
+</head>
+<body class="flex min-h-screen flex-col bg-app-bg text-app-text">
+  <header class="sticky top-0 z-50 border-b border-app-border bg-app-card">
+    <div class="relative mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
+      <a href="index.html" class="text-lg font-bold text-app-accent">Laptop Finder</a>
+      <button id="nav-toggle" class="btn-action btn-outline px-3 md:hidden">Menu</button>
+      <nav id="nav-menu" class="absolute left-0 top-full hidden w-full flex-col gap-3 border-b border-app-border bg-app-card p-4 md:static md:flex md:w-auto md:flex-row md:items-center md:gap-5 md:border-0 md:p-0">
+        <a href="index.html" class="hover:text-app-accent">Home</a>
+        <a href="laptops.html" class="hover:text-app-accent">Laptops</a>
+        <a href="favorites.html" class="hover:text-app-accent">Favorites</a>
+        <a href="compare.html" class="hover:text-app-accent">Compare</a>
+        <button id="theme-toggle" class="btn-action btn-outline">Theme</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="mx-auto w-full max-w-6xl flex-1 px-4 py-10">
+    <h1 class="text-2xl font-bold">Compare your favorites</h1>
+    <p class="mt-1 text-app-muted">Pick two to four laptops and the best value in each row is highlighted.</p>
+
+    <p id="compare-message" class="mt-4 rounded-lg border border-app-border bg-app-card px-4 py-3 text-sm text-app-accent"></p>
+
+    <section class="mt-6 rounded-xl border border-app-border bg-app-card p-4">
+      <h2 class="font-bold">Choose from your favorites</h2>
+      <div id="compare-picker" class="mt-3 flex flex-wrap gap-3">
+        <p class="text-app-muted">Loading...</p>
+      </div>
+    </section>
+
+    <section id="compare-table" class="mt-6">
+      <p class="text-app-muted">Loading...</p>
+    </section>
+  </main>
+
+  <footer class="border-t border-app-border bg-app-card py-6 text-center text-sm text-app-muted">
+    Student Laptop Finder — SW302 Assignment 2
+  </footer>
+
+  <script type="module" src="src/js/compare-page.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="performance">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Laptop Finder</title>
+  <link rel="stylesheet" href="dist/output.css">
+</head>
+<body class="flex min-h-screen flex-col bg-app-bg text-app-text">
+  <header class="sticky top-0 z-50 border-b border-app-border bg-app-card">
+    <div class="relative mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
+      <a href="index.html" class="text-lg font-bold text-app-accent">Laptop Finder</a>
+      <button id="nav-toggle" class="btn-action btn-outline px-3 md:hidden">Menu</button>
+      <nav id="nav-menu" class="absolute left-0 top-full hidden w-full flex-col gap-3 border-b border-app-border bg-app-card p-4 md:static md:flex md:w-auto md:flex-row md:items-center md:gap-5 md:border-0 md:p-0">
+        <a href="index.html" class="hover:text-app-accent">Home</a>
+        <a href="laptops.html" class="hover:text-app-accent">Laptops</a>
+        <a href="favorites.html" class="hover:text-app-accent">Favorites</a>
+        <a href="compare.html" class="hover:text-app-accent">Compare</a>
+        <button id="theme-toggle" class="btn-action btn-outline">Theme</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="mx-auto w-full max-w-6xl flex-1 px-4 py-10">
+    <section class="text-center">
+      <h1 class="text-3xl font-bold sm:text-4xl lg:text-5xl">Find the right laptop for your studies</h1>
+      <p class="mx-auto mt-4 max-w-2xl text-app-muted">
+        Student Laptop Finder lets you browse laptops, search and filter them, save your favorites,
+        and compare them side by side before you spend your money.
+      </p>
+      <div class="mt-6 flex flex-wrap justify-center gap-3">
+        <a href="laptops.html" class="btn-action btn-primary">Browse laptops</a>
+        <a href="favorites.html" class="btn-action btn-outline">My favorites</a>
+      </div>
+    </section>
+
+    <div id="home-error" class="hidden mt-8 rounded-xl border border-app-border bg-app-card p-6 text-center text-app-muted">
+      We could not load the laptop data. Please run the site from a local server like VS Code Live Server and try again.
+    </div>
+
+    <section class="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3">
+      <div class="rounded-xl border border-app-border bg-app-card p-6 text-center">
+        <p id="stat-total" class="text-3xl font-bold text-app-accent">Loading...</p>
+        <p class="mt-1 text-sm text-app-muted">Laptops available</p>
+      </div>
+      <div class="rounded-xl border border-app-border bg-app-card p-6 text-center">
+        <p id="stat-lowest" class="text-3xl font-bold text-app-accent">Loading...</p>
+        <p class="mt-1 text-sm text-app-muted">Lowest price</p>
+      </div>
+      <div class="rounded-xl border border-app-border bg-app-card p-6 text-center">
+        <p id="stat-favorites" class="text-3xl font-bold text-app-accent">Loading...</p>
+        <p class="mt-1 text-sm text-app-muted">Saved favorites</p>
+      </div>
+    </section>
+
+    <section class="mt-12">
+      <h2 class="text-xl font-bold">Where do you want to go?</h2>
+      <div class="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <a href="laptops.html" class="laptop-card">
+          <h3 class="font-bold">Laptop catalogue</h3>
+          <p class="text-sm text-app-muted">See every laptop with search, filters, and sorting.</p>
+        </a>
+        <a id="link-details" href="details.html" class="laptop-card">
+          <h3 class="font-bold">Laptop details</h3>
+          <p class="text-sm text-app-muted">Read the full specifications of one laptop.</p>
+        </a>
+        <a href="favorites.html" class="laptop-card">
+          <h3 class="font-bold">Favorites</h3>
+          <p class="text-sm text-app-muted">The laptops you saved, with total and average price.</p>
+        </a>
+        <a href="compare.html" class="laptop-card">
+          <h3 class="font-bold">Compare</h3>
+          <p class="text-sm text-app-muted">Put two to four favorites side by side.</p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-app-border bg-app-card py-6 text-center text-sm text-app-muted">
+    Student Laptop Finder — SW302 Assignment 2
+  </footer>
+
+  <script type="module" src="src/js/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="performance">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Favorites — Student Laptop Finder</title>
+  <link rel="stylesheet" href="dist/output.css">
+</head>
+<body class="flex min-h-screen flex-col bg-app-bg text-app-text">
+  <header class="sticky top-0 z-50 border-b border-app-border bg-app-card">
+    <div class="relative mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
+      <a href="index.html" class="text-lg font-bold text-app-accent">Laptop Finder</a>
+      <button id="nav-toggle" class="btn-action btn-outline px-3 md:hidden">Menu</button>
+      <nav id="nav-menu" class="absolute left-0 top-full hidden w-full flex-col gap-3 border-b border-app-border bg-app-card p-4 md:static md:flex md:w-auto md:flex-row md:items-center md:gap-5 md:border-0 md:p-0">
+        <a href="index.html" class="hover:text-app-accent">Home</a>
+        <a href="laptops.html" class="hover:text-app-accent">Laptops</a>
+        <a href="favorites.html" class="hover:text-app-accent">Favorites</a>
+        <a href="compare.html" class="hover:text-app-accent">Compare</a>
+        <button id="theme-toggle" class="btn-action btn-outline">Theme</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="mx-auto w-full max-w-6xl flex-1 px-4 py-10">
+    <div class="flex flex-wrap items-center justify-between gap-4">
+      <div>
+        <h1 class="text-2xl font-bold">My favorites</h1>
+        <p class="mt-1 text-app-muted">The laptops you saved are kept here even after a reload.</p>
+      </div>
+      <button id="clear-button" class="btn-action btn-outline">Clear all favorites</button>
+    </div>
+
+    <section class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
+      <div class="rounded-xl border border-app-border bg-app-card p-6 text-center">
+        <p id="fav-count" class="text-3xl font-bold text-app-accent">0</p>
+        <p class="mt-1 text-sm text-app-muted">Saved laptops</p>
+      </div>
+      <div class="rounded-xl border border-app-border bg-app-card p-6 text-center">
+        <p id="fav-total" class="text-3xl font-bold text-app-accent">$0</p>
+        <p class="mt-1 text-sm text-app-muted">Total price</p>
+      </div>
+      <div class="rounded-xl border border-app-border bg-app-card p-6 text-center">
+        <p id="fav-average" class="text-3xl font-bold text-app-accent">-</p>
+        <p class="mt-1 text-sm text-app-muted">Average price</p>
+      </div>
+    </section>
+
+    <div id="empty-message" class="mt-6 hidden rounded-xl border border-app-border bg-app-card p-8 text-center text-app-muted">
+      You have no favorites yet. <a href="laptops.html" class="text-app-accent hover:underline">Browse the catalogue</a> and save a few laptops.
+    </div>
+
+    <div id="favorites-grid" class="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"></div>
+  </main>
+
+  <footer class="border-t border-app-border bg-app-card py-6 text-center text-sm text-app-muted">
+    Student Laptop Finder — SW302 Assignment 2
+  </footer>
+
+  <script type="module" src="src/js/favorites.js"></script>
+</body>
+</html>

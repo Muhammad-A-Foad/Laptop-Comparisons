@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" width="400" height="260">
+  <rect width="400" height="260" fill="#e8f5e9"/>
+  <rect x="95" y="40" width="210" height="140" rx="10" fill="#ffffff" stroke="#334155" stroke-width="6"/>
+  <rect x="112" y="57" width="176" height="105" rx="5" fill="#66bb6a"/>
+  <circle cx="200" cy="109" r="30" fill="#ffffff" opacity="0.45"/>
+  <path d="M65 180 H335 L310 206 H90 Z" fill="#e2e8f0" stroke="#334155" stroke-width="6" stroke-linejoin="round"/>
+  <rect x="176" y="188" width="48" height="6" rx="3" fill="#cbd5e1"/>
+  <text x="200" y="238" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="bold" fill="#1f2937">Dell Inspiron 15 3520</text>
+</svg>

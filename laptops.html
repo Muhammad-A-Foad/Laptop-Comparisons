@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="performance">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laptop catalogue — Student Laptop Finder</title>
+  <link rel="stylesheet" href="dist/output.css">
+</head>
+<body class="flex min-h-screen flex-col bg-app-bg text-app-text">
+  <header class="sticky top-0 z-50 border-b border-app-border bg-app-card">
+    <div class="relative mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
+      <a href="index.html" class="text-lg font-bold text-app-accent">Laptop Finder</a>
+      <button id="nav-toggle" class="btn-action btn-outline px-3 md:hidden">Menu</button>
+      <nav id="nav-menu" class="absolute left-0 top-full hidden w-full flex-col gap-3 border-b border-app-border bg-app-card p-4 md:static md:flex md:w-auto md:flex-row md:items-center md:gap-5 md:border-0 md:p-0">
+        <a href="index.html" class="hover:text-app-accent">Home</a>
+        <a href="laptops.html" class="hover:text-app-accent">Laptops</a>
+        <a href="favorites.html" class="hover:text-app-accent">Favorites</a>
+        <a href="compare.html" class="hover:text-app-accent">Compare</a>
+        <button id="theme-toggle" class="btn-action btn-outline">Theme</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="mx-auto w-full max-w-6xl flex-1 px-4 py-10">
+    <h1 class="text-2xl font-bold">Laptop catalogue</h1>
+    <p class="mt-1 text-app-muted">Search, filter, and sort every laptop we have.</p>
+
+    <div class="mt-6 rounded-xl border border-app-border bg-app-card p-4">
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="sm:col-span-2">
+          <label for="search-input" class="mb-1 block text-sm font-semibold">Search</label>
+          <input id="search-input" type="text" placeholder="Search by name or brand" class="form-control">
+        </div>
+        <div>
+          <label for="category-select" class="mb-1 block text-sm font-semibold">Category</label>
+          <select id="category-select" class="form-control">
+            <option value="all">All categories</option>
+            <option value="ultrabook">Ultrabook</option>
+            <option value="gaming">Gaming</option>
+            <option value="2-in-1">2-in-1</option>
+            <option value="creator">Creator</option>
+            <option value="budget">Budget</option>
+          </select>
+        </div>
+        <div>
+          <label for="price-range" class="mb-1 block text-sm font-semibold">Maximum price</label>
+          <input id="price-range" type="range" min="400" max="2600" step="50" value="2600" class="form-control">
+          <p id="price-label" class="mt-1 text-sm text-app-muted">Up to $2,600</p>
+        </div>
+        <div>
+          <label for="ram-select" class="mb-1 block text-sm font-semibold">Minimum RAM</label>
+          <select id="ram-select" class="form-control">
+            <option value="0">Any</option>
+            <option value="8">8 GB</option>
+            <option value="16">16 GB</option>
+            <option value="32">32 GB</option>
+          </select>
+        </div>
+        <div>
+          <label for="sort-select" class="mb-1 block text-sm font-semibold">Sort by</label>
+          <select id="sort-select" class="form-control">
+            <option value="price-asc">Price: low to high</option>
+            <option value="price-desc">Price: high to low</option>
+            <option value="battery-desc">Battery: long to short</option>
+            <option value="battery-asc">Battery: short to long</option>
+            <option value="weight-asc">Weight: light to heavy</option>
+            <option value="weight-desc">Weight: heavy to light</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <p id="result-count" class="mt-6 text-app-muted"></p>
+
+    <div id="empty-message" class="mt-4 hidden rounded-xl border border-app-border bg-app-card p-8 text-center text-app-muted">
+      No laptops match your search. Try changing the filters.
+    </div>
+
+    <div id="laptop-grid" class="mt-4 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"></div>
+  </main>
+
+  <footer class="border-t border-app-border bg-app-card py-6 text-center text-sm text-app-muted">
+    Student Laptop Finder — SW302 Assignment 2
+  </footer>
+
+  <script type="module" src="src/js/laptops.js"></script>
+</body>
+</html>
